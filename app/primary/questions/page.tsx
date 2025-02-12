@@ -1,8 +1,25 @@
+"use client"
 import Navbar from '@/components/navbar'
 import { Input } from '@/components/ui/input'
 import React from 'react'
+import { useForm, SubmitHandler } from "react-hook-form"
+
+type Inputs = {
+    comment1: string
+    comment2: string
+    comment3: string
+    file: FileList
+}
 
 export default function Questions() {
+
+    const { register, handleSubmit, formState: { errors }, } = useForm<Inputs>()
+
+
+    const onSubmit: SubmitHandler<Inputs> = (data) => {
+        console.log(data)
+    }
+
     return (
         <div>
             <Navbar />
@@ -33,7 +50,7 @@ export default function Questions() {
                         </table>
                     </div>
 
-                    <div>
+                    <form onSubmit={handleSubmit(onSubmit)}>
                         <p className="text-2xl mt-8 text-blue-600">Questions</p>
 
                         <table className="min-w-full border-collapse border-gray-300 text-sm" >
@@ -48,7 +65,7 @@ export default function Questions() {
                             <tbody>
                                 <tr>
                                     <td className="px-4 py-2 w-2/5">Does your organization have a documented information security policy which is approved by the management?</td>
-                                    <td className="px-4 py-2">
+                                    <td className="py-2 w-1/6">
                                         <div className="flex space-x-4">
                                             <label className="flex items-center space-x-2">
                                                 <input type="radio" name="options" value="Yes" />
@@ -64,14 +81,18 @@ export default function Questions() {
                                             </label>
                                         </div>
                                     </td>
-                                    <td className="px-1 py-2 w-1/3"><Input placeholder='add your comments here' className='rounded-sm ' /></td>
+                                    <td className="px-1 py-2 w-1/3">
+                                        <Input placeholder='add your comments here' className='rounded-sm ' {...register('comment1')} />
+                                    </td>
 
-                                    <td className=" py-2 "><Input type='file' multiple placeholder='add your file here' className='w-96' /></td>
+                                    <td className=" py-2 ">
+                                        <Input type='file' multiple placeholder='add your file here' className='w-96' />
+                                    </td>
                                 </tr>
 
                                 <tr>
                                     <td className="px-4 py-2">Is the information security policy document communicated and published to your employees, contractors and other relevant external parties?</td>
-                                    <td className="px-4 py-2">
+                                    <td className="py-2">
                                         <div className="flex space-x-4">
                                             <label className="flex items-center space-x-2">
                                                 <input type="radio" name="options" value="Yes" />
@@ -87,14 +108,18 @@ export default function Questions() {
                                             </label>
                                         </div>
                                     </td>
-                                    <td className="px-1 py-2 w-1/3"><Input placeholder='add your comments here' className='rounded-sm ' /></td>
+                                    <td className="px-1 py-2 w-1/3">
+                                        <Input placeholder='add your comments here' className='rounded-sm ' {...register('comment2')} />
+                                    </td>
 
-                                    <td className="py-2"><Input type='file' multiple placeholder='add your file here' /></td>
+                                    <td className="py-2">
+                                        <Input type='file' multiple placeholder='add your file here' />
+                                    </td>
                                 </tr>
 
                                 <tr>
                                     <td className="px-4 py-2">Do you have a formal established disciplinary or sanction policy for your employees who have violated security policies and controls?</td>
-                                    <td className="px-4 py-2">
+                                    <td className="py-2">
                                         <div className="flex space-x-4">
                                             <label className="flex items-center space-x-2">
                                                 <input type="radio" name="options" value="Yes" />
@@ -110,18 +135,22 @@ export default function Questions() {
                                             </label>
                                         </div>
                                     </td>
-                                    <td className="px-1 py-2 w-1/3"><Input placeholder='add your comments here' className='rounded-sm ' /></td>
+                                    <td className=" py-2 w-1/3">
+                                        <Input placeholder='add your comments here' className='rounded-sm ' {...register('comment3')} />
+                                    </td>
 
-                                    <td className=" py-2 "><Input type='file' multiple placeholder='add your file here' /></td>
+                                    <td className=" py-2 ">
+                                        <Input type='file' multiple placeholder='add your file here' />
+                                    </td>
                                 </tr>
 
                             </tbody>
 
                         </table>
                         <div className='flex justify-end mt-6'>
-                            <button className="bg-blue-600 p-1 px-3 rounded-md text-white "><b>Submit</b></button>
+                            <button type='submit' className="bg-blue-600 p-1 px-3 rounded-md text-white "><b>Submit</b></button>
                         </div>
-                    </div>
+                    </form>
                 </div>
             </div>
 
