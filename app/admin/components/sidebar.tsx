@@ -1,3 +1,4 @@
+"use client"
 import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -15,6 +16,7 @@ import {
     SidebarRail,
 } from "@/components/ui/sidebar"
 import Logo from '../../../public/PrivacyCureLogoWhite.png'
+import { usePathname } from 'next/navigation'
 
 export default function AdminSidebar() {
     const data = {
@@ -72,6 +74,9 @@ export default function AdminSidebar() {
         ],
     }
 
+    const pathname = usePathname()
+
+
     return (
         <Sidebar >
             <SidebarHeader className='bg-gray-800'>
@@ -82,13 +87,14 @@ export default function AdminSidebar() {
             <SidebarContent className='bg-gray-800 text-white'>
                 {/* We create a SidebarGroup for each parent. */}
                 {data.navMain.map((item) => (
+
                     <SidebarGroup key={item.title}>
                         <SidebarGroupLabel className='text-gray-500'>{item.title}</SidebarGroupLabel>
                         <SidebarGroupContent>
                             <SidebarMenu >
                                 {item.items.map((item) => (
                                     <SidebarMenuItem key={item.title}>
-                                        <SidebarMenuButton asChild className='hover:bg-orange-900 hover:text-white'>
+                                        <SidebarMenuButton asChild isActive={pathname === item.url ? true : false} className='hover:bg-orange-900 hover:text-white'>
                                             <a href={item.url}>{item.title}</a>
                                         </SidebarMenuButton>
                                     </SidebarMenuItem>

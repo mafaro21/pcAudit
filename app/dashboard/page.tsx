@@ -21,7 +21,6 @@ export default function Home() {
                                 </div>
                                 <p className="text-left px-2 py-1">Audit Details</p>
                                 <p className="text-left px-2 py-1">Audit Details</p>
-                                <p className="text-left px-2 py-1">Audit Details</p>
                             </Link>
                         ))}
 

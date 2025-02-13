@@ -36,11 +36,7 @@ export default function adminLogin() {
                         required
                         {...register("username", {
                             required: "Username is required",
-                            pattern: {
-                                value: /^[^@ ]+@[^@ ]+\.[^@ .]{2,}$/,
-                                message: "Invalid username address",
-                            },
-                            minLength: { value: 12, message: "Your username is too short" },
+                            minLength: { value: 5, message: "Your username is too short" },
                         })}
                     />
                     {errors.username && (

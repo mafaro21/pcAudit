@@ -39,22 +39,20 @@ export default function Navbar() {
                         <DropdownMenuSeparator />
                         <DropdownMenuGroup>
                             <DropdownMenuItem>
-                                Profile
-                                <DropdownMenuShortcut>⇧⌘P</DropdownMenuShortcut>
+                                <Link href={'/dashboard/profile'}>
+                                    Profile
+                                </Link>
                             </DropdownMenuItem>
                             <DropdownMenuItem>
                                 Settings
-                                <DropdownMenuShortcut>⌘S</DropdownMenuShortcut>
                             </DropdownMenuItem>
                             <DropdownMenuItem>
                                 Keyboard shortcuts
-                                <DropdownMenuShortcut>⌘K</DropdownMenuShortcut>
                             </DropdownMenuItem>
                         </DropdownMenuGroup>
                         <DropdownMenuSeparator />
                         <DropdownMenuItem>
                             Log out
-                            <DropdownMenuShortcut>⇧⌘Q</DropdownMenuShortcut>
                         </DropdownMenuItem>
                     </DropdownMenuContent>
                 </DropdownMenu>
