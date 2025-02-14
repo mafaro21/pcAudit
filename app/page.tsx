@@ -31,7 +31,7 @@ export default function Home() {
           <Input
             type="email"
             placeholder="Email"
-            className="w-full p-1 px-3 rounded-md text-black mb-4 bg-white"
+            className="w-80 p-1 px-3 rounded-md text-black mb-4 bg-white"
             required
             {...register("email", {
               required: "Email is required",
