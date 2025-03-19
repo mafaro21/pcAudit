@@ -22,11 +22,11 @@ export default function AdminSidebar() {
     const data = {
         navMain: [
             {
-                title: "Getting Started",
+                title: "Audit Management",
                 url: "#",
                 items: [
                     {
-                        title: "Installation",
+                        title: "View Audits",
                         url: "#",
                     },
                     {

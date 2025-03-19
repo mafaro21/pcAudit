@@ -65,31 +65,31 @@ export default function Questions() {
                                 </tr>
                             </thead>
                             <tbody>
-                                {[1, 2, 3].map((num) => (
-                                    <tr key={num}>
-                                        <td className="px-4 py-2 w-2/5">
-                                            {num === 1 ? "Does your organization have a documented information security policy which is approved by management?"
-                                                : num === 2 ? "Is the information security policy document communicated to employees and contractors?"
-                                                    : "Do you have a disciplinary policy for security violations?"}
-                                        </td>
-                                        <td className="py-2 w-1/6">
-                                            <div className="flex space-x-4">
-                                                {["Yes", "No", "N/A"].map((option) => (
-                                                    <label key={option} className="flex items-center space-x-2">
-                                                        <input type="radio" value={option} {...register(`answer${num}` as any)} />
-                                                        <span>{option}</span>
-                                                    </label>
-                                                ))}
-                                            </div>
-                                        </td>
-                                        <td className="px-1 py-2 w-1/3">
-                                            <Input placeholder='add your comments here' className='rounded-sm' {...register(`comment${num}` as any)} />
-                                        </td>
-                                        <td className="py-2">
-                                            <Input type='file' {...register(`file${num}` as any)} className='w-96' />
-                                        </td>
-                                    </tr>
-                                ))}
+                                <tr>
+                                    <td className="px-4 py-2 w-2/5">Does your organization have a documented information security policy which is approved by the management?</td>
+                                    <td className="py-2 w-1/6">
+                                        <div className="flex space-x-4">
+                                            <label className="flex items-center space-x-2">
+                                                <input type="radio" name="options" value="Yes" />
+                                                <span>Yes</span>
+                                            </label>
+                                            <label className="flex items-center space-x-2">
+                                                <input type="radio" name="options" value="No" />
+                                                <span>No</span>
+                                            </label>
+                                            <label className="flex items-center space-x-2">
+                                                <input type="radio" name="options" value="N/A" />
+                                                <span>N/A</span>
+                                            </label>
+                                        </div>
+                                    </td>
+                                    <td className="px-1 py-2 w-1/3">
+                                        <Input placeholder='add your comments here' className=' rounded-sm focus:border-blue-500 focus:ring focus:ring-blue-300' />
+                                    </td>
+                                    <td className="py-2">
+                                        <Input type='file' className='w-96' />
+                                    </td>
+                                </tr>
                             </tbody>
                         </table>
 

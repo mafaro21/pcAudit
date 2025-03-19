@@ -38,11 +38,11 @@ export default function Navbar() {
                         <DropdownMenuLabel>My Account</DropdownMenuLabel>
                         <DropdownMenuSeparator />
                         <DropdownMenuGroup>
-                            <DropdownMenuItem>
-                                <Link href={'/dashboard/profile'}>
+                            <Link href={'/dashboard/profile'} >
+                                <DropdownMenuItem className="cursor-pointer">
                                     Profile
-                                </Link>
-                            </DropdownMenuItem>
+                                </DropdownMenuItem>
+                            </Link>
                             <DropdownMenuItem>
                                 Settings
                             </DropdownMenuItem>

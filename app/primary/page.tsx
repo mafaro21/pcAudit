@@ -23,58 +23,56 @@ export default function Home() {
             <table className="min-w-full border-collapse border-gray-300 text-sm ml-9" >
               <tbody>
                 <tr className="">
-                  <td className="px-4 py-2 text-left italic">Assessment Types:</td>
+                  <td className="px-4 py-2 text-left italic"><b>Assessment Types:</b></td>
                   <td className="px-4 py-2 text-left">Primary Information Security Assessment (TIA)</td>
                   <td className="px-4 py-2 text-left"></td>
                   <td className="px-4 py-2 text-left"></td>
                   <td className="px-4 py-2 text-left"></td>
                 </tr>
                 <tr>
-                  <td className="px-4 py-2 italic">Sent By:</td>
+                  <td className="px-4 py-2 italic"><b>Sent By:</b></td>
                   <td className="px-4 py-2">PrivacyCure</td>
-                  <td className="px-4 py-2 italic">Reviewer(s):</td>
+                  <td className="px-4 py-2 italic"><b>Reviewer(s):</b></td>
                   <td className="px-4 py-2">Kisalaya Kurariya, Nithin Venkatesh</td>
-                  <td className="px-4 py-2 italic">Date Sent:</td>
+                  <td className="px-4 py-2 italic"><b>Date Sent:</b></td>
                   <td className="px-4 py-2">7 Jun 2024</td>
 
                 </tr>
                 <tr className="">
-                  <td className="px-4 py-2 italic">To:</td>
+                  <td className="px-4 py-2 italic"><b>To:</b></td>
                   <td className="px-4 py-2">Rafferty Investments TA Providence</td>
-                  <td className="px-4 py-2 italic">Recipient(s):</td>
+                  <td className="px-4 py-2 italic"><b>Recipient(s):</b></td>
                   <td className="px-4 py-2">Farai, lainah, Tanyaradwza, Tineyi Zimbudzana, Tinotenda Zinyeka</td>
-                  <td className="px-4 py-2 italic">Date Due:</td>
+                  <td className="px-4 py-2 italic"><b>Date Due:</b></td>
                   <td className="px-4 py-2">14 Jun 2024</td>
                 </tr>
+              </tbody>
+            </table>
 
-                {/* <tr className="">
-                  <td className="px-4 py-2 text-left italic">Risk Rating Score:</td>
-                  <td className="px-4 py-2 text-left"></td>
-                  <td className="px-4 py-2 text-left"></td>
-                  <td className="px-4 py-2 text-left"></td>
-                  <td className="px-4 py-2 text-left italic">Assessment Compliance:</td>
+            <table className="w-auto border-collapse border-gray-300 text-sm ml-9 mt-8" >
+              <tbody>
+                <tr className="">
+                  <td className="px-4 py-2 text-left italic"><b>Assessment Compliance:</b></td>
                   <td className="px-4 py-2 text-left">Compliant</td>
-                  <td className="px-4 py-2 text-left italic">Compliance Value:</td>
+                  <td className="px-4 py-2 text-left italic"><b>Compliance Value:</b></td>
                   <td className="px-4 py-2 text-left">92%</td>
-                </tr> */}
+                </tr>
               </tbody>
             </table>
           </div>
 
-          <div className="flex justify-between ml-16 mt-16 text-sm">
-            <div className="italic">Risk Rating Score:</div>
-            <div></div>
+          {/* <div className="flex justify-between ml-16 mt-16 text-sm">
 
             <div className="flex ">
-              <div className="italic">Assessment Compliance:</div>
+              <div className="italic"><b>Assessment Compliance:</b></div>
               <div className="ml-5">Compliant</div>
             </div>
 
             <div className="flex ">
-              <div className="italic">Compliance Value:</div>
+              <div className="italic"><b>Compliance Value:</b></div>
               <div className="ml-5">92%</div>
             </div>
-          </div>
+          </div> */}
 
           <div>
             <p className="text-2xl mt-8 text-blue-600">Question Categories</p>
